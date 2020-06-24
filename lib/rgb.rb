@@ -9,3 +9,8 @@ def to_hex(r, g, b)
     hex + n.to_s(16).rjust(2, '0')
   end
 end
+
+def to_ints(hex)
+  # (1..3).map{ |i| hex[(i*2-1)..(i*2)].hex }
+  hex.scan(/\w\w/).map(&:hex)
+end

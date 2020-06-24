@@ -12,4 +12,15 @@ RSpec.describe 'RgbTest' do
       expect(to_hex(4, 60, 120)).to eq '#043c78'
     end
   end
+  describe 'to_ints' do
+    it '#000000' do
+      expect(to_ints('#000000')).to eq [0, 0, 0]
+    end
+    example '#ffffff' do
+      expect(to_ints('#ffffff')).to eq [255, 255, 255]
+    end
+    example '#043c78' do
+      expect(to_ints('#043c78')).to eq [4, 60, 120]
+    end
+  end
 end
