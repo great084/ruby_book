@@ -97,4 +97,6 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 # =end
+  # libの自動読み込み
+  Dir[File.join(File.dirname(__FILE__), "../lib/**/*.rb")].each { |f| require f }
 end
